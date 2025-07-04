@@ -1,0 +1,24 @@
+Please analyze the logic of the focal method and output only its branch condition information in the following JSON structure. Use the provided context to ensure accurate and consistent identification of branch conditions. Specifically, make sure that each branch condition is evaluated only once, and that the `True` and `False` paths accurately reflect the behavior that occurs for that branch condition, avoiding redundant or conflicting outputs for the same branch condition. For each branch condition, output only one valid path: either `True` or `False`, depending on the actual logic of the branch condition. If the method contains no branch conditions (e.g., simple getter methods), output an empty `branches` array. Do not include explanations, input details, or any additional commentary. Only output the JSON content that represents the branch conditions.
+
+The output format is as follows:
+```json
+{
+    "branches": [
+        {
+            "condition": "Description of the condition",
+            "path": "True or False"
+        }
+    ]
+}
+```
+
+If the method contains no branch conditions:
+```json
+{
+    "branches": []
+}
+```
+
+Please ensure logical consistency when outputting the branch condition and path. For example, if the branch condition is `array == null`, ensure that only one path (`True` or `False`) is output, and that the path accurately reflects the behavior of the branch condition in the code.
+
+I want you to play the role of a professional who infers method branch condition information.
